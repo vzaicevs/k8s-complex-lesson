@@ -11,12 +11,3 @@ spec:
   dnsNames:
     - vzaicevs.me
     - www.vzaicevs.me
-  acme:
-    config:
-      - http01:
-          ingressClass: nginx
-        domains:
-          - vzaicevs.me
-          - www.vzaicevs.me
-
-    
