@@ -1,0 +1,22 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: vzaicevs-me-tls
+spec:
+  secretName: vzaicevs-me
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: vzaicevs.me
+  dnsNames:
+    - vzaicevs.me
+    - www.vzaicevs.me
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - vzaicevs.me
+          - www.vzaicevs.me
+
+    
